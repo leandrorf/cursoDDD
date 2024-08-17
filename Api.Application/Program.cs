@@ -1,5 +1,6 @@
 ﻿using Api.CrossCutting.DependencyInjection;
 using Api.CrossCutting.Mappings;
+using Api.Data.Context;
 using Api.Domain.Security;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -109,5 +110,17 @@ app.UseHttpsRedirection( );
 app.UseAuthorization( );
 
 app.MapControllers( );
+
+//if ( Environment.GetEnvironmentVariable( "MIGRATION" ).ToLower( ) == "APLICAR".ToLower( ) )
+//{
+//    using ( var service = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>( )
+//                                                .CreateScope( ) )
+//    {
+//        using ( var context = service.ServiceProvider.GetService<MyContext>( ) )
+//        {
+//            context.Database.Migrate( );
+//        }
+//    }
+//}
 
 app.Run( );
