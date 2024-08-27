@@ -1,0 +1,11 @@
+/Api.Application/obj
+/Api.Application/bin
+/Api.CrossCutting/obj
+/Api.CrossCutting/bin
+/Api.Data/obj
+/Api.Data/bin
+/Api.Domain/obj
+/Api.Domain/bin
+/Api.Service/obj
+/Api.Service/bin
+/.vs
